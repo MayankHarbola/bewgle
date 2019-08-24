@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>bewgle</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/scroll.css">
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <script src="./node_modules/angular/angular.min.js"></script>
+
+    <script src="https://code.angularjs.org/1.4.0-rc.0/angular-animate.js"></script>
+    <script src="https://code.angularjs.org/1.4.0-rc.0/angular-aria.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.10/d3.min.js"></script>
+    <script src="./scripts/ng-knob.min.js"></script>
+
+  
+    <script src="./scripts/app.js"></script>
+    <script src="./utils/commonutils.js"></script>
+    <script src="./scripts/factory.js"></script>
+    <script src="./scripts/controller.js"></script>
+  </head>
+  <body ng-app="product">
+    <div class="container" ng-controller="ctrl">
+      <div class="imgContainer">
+        <img
+          id="zoom_01"
+          ng-src="{{ data.imageUrl }}"
+          class="img-responsive"
+          data-zoom-image="./images/large/largeimage.png"
+          style="width: 300px; height:300px;"
+        />
+        <span class="respons">
+          <button class="btn cart">
+            <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;ADD TO CART
+          </button>
+          <button class="btn buynow">
+            <i class="fa fa-bolt"></i>&nbsp;&nbsp;BUY NOW
+          </button>
+        </span>
+      </div>
+
+      <div class="descContainer scrollbar" id="scrollbar-custom">
+        <h3>{{ data.title }}</h3>
+
+        <div>
+          <div class="inline" ng-repeat="i in getNumber()  track by $index">
+            <span
+              ng-if="$index+1 <= totalRating"
+              class="fa fa-star checked"
+            ></span>
+            <span ng-if="$index+1 > totalRating" class="fa fa-star "></span>
+          </div>
+
+          <span
+            >{{ totalRating }}/5.0
+            <label style="color: blue">{{ data.reviewCount }}</label>
+            Reviews</span
+          >
+        </div>
+
+        <div>
+          <label class="price">{{ data.price }}</label>
+          <del>2,799</del>
+          <span style="color: green;font-size:30">35% off</span>
+        </div>
+
+        <ul>
+          <li>
+            <i class="fa fa-truck"></i>&nbsp;&nbsp;same day delivery for
+            premiuem member
+          </li>
+          <li class="inline Warranty">
+            <i class="fa fa-shield"></i>&nbsp;&nbsp;Warranty Type : Seller
+            Warranty
+          </li>
+          <li class="inline">
+            <i class="fa fa-check-circle"></i>&nbsp;&nbsp;7 Days Easy return
+          </li>
+          <li>
+            <i class="fa fa-check" style="color: green"></i
+            >&nbsp;&nbsp;shipping: <del>Rs 49</del>
+            <span style="color: green">Free</span>
+          </li>
+        </ul>
+
+        <div class="pincode">
+          <input
+            class="input"
+            type="text"
+            name=""
+            id=""
+            placeholder="Enter pin code"
+          />
+          <button class="check btn-sm">check</button>
+          Generally delivered in 7- 11 days
+        </div>
+
+        <div class="reviews">
+          <h4>Ratings & Reviews</h4>
+          <div class="flex">
+            <div class="avg">
+              <h3>
+                {{ totalRating }} <span class="fa fa-star checked"></span>
+              </h3>
+              <label for="">{{ data.reviewCount }} Reviews</label>
+            </div>
+
+            <div class="rating">
+              <div ng-repeat="data in data.topScores" class="inline ratedata ">
+                <ui-knob
+                  ng-class="knob"
+                  value="data.score"
+                  options="options"
+                ></ui-knob>
+                <div>
+                  {{ data.topic }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/jquery-1.8.3.min.js"></script>
+    <script src="./scripts/jquery.elevatezoom.js"></script>
+    <script src="./scripts/jqcircle.js"></script>
+  </body>
+</html>

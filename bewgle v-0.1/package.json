@@ -1,0 +1,21 @@
+{
+  "name": "bewgle",
+  "version": "1.0.0",
+  "description": "Internship Task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MayankHarbola"
+  },
+  "author": "Mayank Harbola",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/material": "^8.1.3",
+    "angular": "^1.7.8",
+    "angular-material": "^1.1.20",
+    "ng-knob": "^1.0.1"
+  }
+}

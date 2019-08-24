@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css?family=Livvic&display=swap");
+body {
+  /* background-color: #E40046; */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(248, 80, 50, 1) 0%,
+    rgba(241, 111, 92, 1) 0%,
+    rgba(240, 47, 23, 1) 0%,
+    rgba(228, 0, 70, 1) 38%,
+    rgba(228, 0, 70, 1) 100%
+  );
+  overflow: hidden;
+  font-family: "Livvic", sans-serif;
+}
+li {
+  list-style-type: none;
+}
+.container {
+  /* background: #F7F7F7; */
+  background: white;
+  display: flex;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-top: 50px;
+  height: 85vh;
+  margin-bottom: 50px;
+}
+.imgContainer {
+  flex: 1;
+  text-align: center;
+}
+.cart,
+.buynow {
+  /* background: #E40046; */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(248, 80, 50, 1) 0%,
+    rgba(241, 111, 92, 1) 0%,
+    rgba(240, 47, 23, 1) 0%,
+    rgba(228, 0, 70, 1) 38%,
+    rgba(228, 0, 70, 1) 100%
+  );
+  width: 170px;
+  margin-right: 5px;
+  font-size: 18px;
+  color: white;
+  border-radius: 0px;
+}
+.cart:focus,
+.buynow:focus {
+  outline: none;
+}
+.cart:hover,
+.buynow:hover {
+  color: white;
+}
+.buynow {
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 175, 75, 1) 0%,
+    rgba(255, 146, 10, 1) 27%,
+    rgba(255, 146, 10, 1) 100%
+  );
+}
+.descContainer {
+  flex: 2;
+  overflow-y: auto;
+}
+.descContainer h3 {
+  margin-top: 20px;
+}
+.checked {
+  color: orange;
+}
+.reviews {
+  margin-top: 35px;
+}
+.avg {
+  padding-right: 25px;
+  border-right: 1px solid lightgray;
+}
+.ratedata {
+  margin: 20px;
+  text-align: center;
+}
+.price {
+  font-size: 35px;
+}
+.flex {
+  display: flex;
+}
+.inline {
+  display: inline-block;
+}
+.Warranty {
+  margin-right: 50px;
+}
+.inside {
+  display: inline;
+}
+.check {
+  background: #333333;
+  color: white;
+  margin-right: 88px;
+}
+.pincode {
+  margin: 25px;
+  margin-top: 22px;
+}
+/* *****************Media Queries********************** */
+@media screen and (max-width: 1152px) {
+  .cart,
+  .buynow {
+    /* background: #E40046; */
+    background: -webkit-linear-gradient(
+      left,
+      rgba(248, 80, 50, 1) 0%,
+      rgba(241, 111, 92, 1) 0%,
+      rgba(240, 47, 23, 1) 0%,
+      rgba(228, 0, 70, 1) 38%,
+      rgba(228, 0, 70, 1) 100%
+    );
+    width: 120px;
+    margin-right: 5px;
+    font-size: 12px;
+    color: white;
+    border-radius: 0px;
+  }
+  .buynow {
+    background: -webkit-linear-gradient(
+      left,
+      rgba(255, 175, 75, 1) 0%,
+      rgba(255, 146, 10, 1) 27%,
+      rgba(255, 146, 10, 1) 100%
+    );
+  }
+}
+@media screen and (max-width: 700px) {
+  .container,
+  .flex {
+    flex-direction: column;
+  }
+  .avg {
+    text-align: center;
+  }
+  .respons {
+    display: block;
+  }
+  .ratedata ui-knob {
+    font-size: 10px;
+  }
+  body{
+    overflow: hidden;
+  }
+  .input{
+    width: 125px;
+  }
+  ui-knob{
+    height: 10px;
+  }
+}
