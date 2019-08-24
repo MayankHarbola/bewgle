@@ -1,4 +1,4 @@
-app.controller("ctrl", ($scope,factory) => {
+app.controller("ctrl", ($scope,factory,$window) => {
   $scope.totalRating = 0;
   let promise = factory.getData();
   promise.then(
@@ -16,10 +16,10 @@ app.controller("ctrl", ($scope,factory) => {
   $scope.getNumber = () => {
     return new Array(5);
   };
-
-  // $scope.$watch('customQuery', function() {
-  //   console.log("size chota hogya");
-  // });
+  var screenWidth = $window.pageYOffset ;
+  $scope.$watch('screenWidth', function() {
+    if(screenWidth>700)console.log("size chota hogya");
+  });
   
   // $scope.customQuery = $mdMedia('(min-width: 1234px)');
 
