@@ -24,7 +24,7 @@ app.controller("ctrl", ($scope,factory,$window) => {
   // $scope.customQuery = $mdMedia('(min-width: 1234px)');
 
   $scope.options = {
-    size: 80,
+    size: 50,
     //other options
     readOnly: true,
     skin: {
@@ -37,7 +37,7 @@ app.controller("ctrl", ($scope,factory,$window) => {
     fontSize: "auto",
     dynamicOptions: true,
     trackWidth: 6,
-    barWidth: 12,
+    barWidth: 8,
     textColor: "#494B52",
     step: 0.1,
     max: 5
