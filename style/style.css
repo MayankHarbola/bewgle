@@ -156,7 +156,8 @@ li {
   .input{
     width: 125px;
   }
-  ui-knob{
-    height: 10px;
+  .rating{
+    display: flex;
+    overflow-x: auto;
   }
 }
